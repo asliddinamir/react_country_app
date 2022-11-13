@@ -1,0 +1,268 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+:root{
+  --main_back: #212927;
+  --header_back: rgb(13, 53, 38);
+  --title_color: #eee;
+  --span_color: yellow;
+  --par_color: #eee;
+}
+.light-mode{
+  --main_back: rgb(190, 185, 185);
+  --header_back: rgb(213, 221, 170);
+  --title_color: #2e2e2e;
+  --span_color: green;
+  --par_color: #333;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--main_back);
+  transition: .3s;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header_back);
+  height: 10vh;
+  
+  padding: 5px 10%;
+  transition: .3s;
+  box-shadow: rgba(0, 0, 0, 0.562) 0px 14px 28px, rgba(0, 0, 0, 0.582) 0px 10px 10px;
+}
+.title{
+  color: var(--title_color);
+  font-weight: 600;
+}
+
+.toggleBtn{
+  background: transparent;
+  padding: .5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.toggleBtn i{
+  font-size: 1.5rem;
+  color: var(--title_color);
+}
+
+.form{
+  margin: 3% 5%;
+  position: relative;
+}
+
+.form input{
+  background: var(--header_back);
+  font-family: inherit;
+  padding: 1rem 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.664) 0px 3px 6px, rgba(0, 0, 0, 0.5) 0px 3px 6px;
+  border: none;
+  font-size: 1rem;
+  color: var(--title_color);
+  outline: none;
+  border-radius: 7px;
+}
+.hidden{
+  display: none;
+}
+.block{
+  display: block;
+}
+
+.searchBtn{
+  background: transparent;
+  padding: .5rem;
+  color: var(--title_color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  margin-left: 1%;
+  cursor: pointer;
+}
+.searchBtn i{
+  font-size: 1rem;
+}
+
+#close{
+  font-size: 1rem;
+  color: var(--title_color);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 27%;
+}
+
+.form input:focus{
+  outline: 1px solid var(--title_color);
+}
+.main_part{
+  display: flex;
+  width: 100%;
+  margin-top: 5%;
+  align-items: center;
+  padding: 0 5%;
+  padding-right: 0 !important;
+}
+.image{
+  width: 80%;
+}
+.image img{
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;    
+}
+
+.info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1%;
+}
+
+.country_title{
+  color: var(--title_color);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 4%;
+}
+.infos{
+  display: flex;
+  margin: 4%;
+}
+.infos p{
+  font-size: 1rem;
+  color: var(--par_color);
+  line-height: 2.3;
+}
+.infos p span{
+  font-size: 1rem;
+  color: var(--span_color);
+}
+.second_row{
+  margin-left: 10%;
+  margin-bottom: 20%;
+}
+
+.results{
+  color: var(--title_color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+footer {
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: var(--header_back);
+  padding-block: 1rem;
+  z-index: 1000;
+}
+
+.name {
+  font-size: .9rem;
+  color: var(--title_color);
+  font-weight: 500;
+  font-weight: 300;
+  font-family: inherit;
+}
+
+.name a {
+  color: rgb(76, 196, 60);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media(max-width:1065px){
+  .form input{
+      width: 80%;
+      padding-left: 10%;
+  }
+  #close{
+      left: 70%;
+  }
+  .image img{
+      height: 25vh;
+
+  }
+}
+@media(max-width:1350px){
+  .image img{
+      height: 35vh;
+  }
+}
+
+@media(max-width:600px){
+  .main{
+      margin-right: 5%;
+  }
+  .form input{
+      width: 100%;
+      padding-inline: 12%;
+  }
+  .searchBtn{
+      padding-left: 2%;
+  }
+  #close{
+      left: 90%;
+  }
+  .image{
+      margin: 2rem;
+  }
+  .infos{
+      display: flex;
+      flex-direction: column;
+      margin-left: 0 !important;
+  }
+  .second_row{
+      margin-left: 0 !important;
+  }
+}
+
+@media(max-width:500px){
+  .navbar{
+      height: 8vh;
+  }
+  .title{
+      font-size: 1rem !important;
+      margin-left: 5%;
+  }
+
+  .navbar .toggleBtn i{
+      font-size: 1rem;
+  }
+}
+
+@media(max-width:922px){
+  .main_part{
+      display: flex;
+      flex-direction: column;
+  }
+  .image img{
+      height: 30vh;
+      width: 300px;
+  }
+}
+
+@media(max-width:400px){
+  .image img{
+      height: auto;
+      width: 100%;
+  }
+}
