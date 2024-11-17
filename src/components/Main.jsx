@@ -132,7 +132,7 @@ export default function Main() {
       )}
       <footer>
             <h3 className="name">
-                <a href="https://asliddin.com/">Asliddin Amirov </a>&copy;2022 | All
+                <a href="https://asliddin.com/">Asliddin Amirov </a>&copy;2024 | All
                 rights reserved
             </h3>
         </footer>
